@@ -6,17 +6,20 @@ const images = [
     {
         id: "0", 
         image: "https://images-na.ssl-images-amazon.com/images/I/71tbBtDLf2L._AC_UL1500_.jpg", 
-        name: "Shoes,"
+        name: "Shoes",
+        cost: "$100"
     },
     {
         id: "1",
         image:  "https://storage.googleapis.com/share-gdicdn/images/product/100054018/100054018_26S_alt4_1332x2000.jpg",
         name: "Sweater",
+        cost: "$80"
     },
     {
         id: "2", 
         image: "https://cdnd.lystit.com/photos/2012/05/01/vince-black-leather-pants-product-2-3405878-680594015.jpeg", 
-        name: "Leather Pants"
+        name: "Leather Pants",
+        cost: "$75"
     },
 ];
 
@@ -39,18 +42,7 @@ const Cart = () => {
                     </SafeAreaView>
                     <SafeAreaView>
                         <Text style={{ fontWeight: "bold" }}>{item.name}</Text>
-                        <Pressable>
-                            <Text 
-                                style={{
-                                    borderColor: "gray", 
-                                    borderWidth: 1, 
-                                    marginVertical: 10, 
-                                    padding: 5,
-                                }}
-                            >
-                                Add to Cart
-                            </Text>
-                        </Pressable>
+                        <Text style={{ fontSize: 15}} > {item.cost} </Text>
                     </SafeAreaView>
                 </Pressable>
             ))}
