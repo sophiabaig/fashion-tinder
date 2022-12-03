@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Cart from './CartPage.js';
+import Cart from './Pages/CartPage';
+import Carousel from 'react-native-snap-carousel';
 
 export default function App() {
   return (
@@ -8,8 +9,9 @@ export default function App() {
     //   <Text>Open up App.js to start working on your app!</Text>
     //   <StatusBar style="auto" />
     // </View>
-    <Cart/>
-    //</Cart>
+    <Cart>
+    </Cart>
+    //<Carousel/>
   );
 }
 

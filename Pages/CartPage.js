@@ -1,7 +1,7 @@
 import React from 'react';
-import { Stylesheet, Text, View, Image, SafeAreaView, Pressable} from 'react-native';
+import { Stylesheet, Text, View, Image, SafeAreaView, Pressable, Button} from 'react-native';
 
-
+//style={{alignItems: 'center', backgroundcolor: 'green', borderRadius: 5}
 const images = [
     {
         id: "0", 
@@ -23,7 +23,7 @@ const images = [
     },
 ];
 
-const Cart = () => {
+export default Cart = () => {
     return (
         <>
             <Text style={{ textAlign: "center", fontSize: 30, paddingTop: 50, paddingLeft: 25}}>
@@ -36,7 +36,7 @@ const Cart = () => {
                 >
                     <SafeAreaView style={{ margin: 10}}>
                         <Image
-                            style={{ width: 100, height: 100, borderRadius: 100, paddingTop: 50}}
+                            style={{ width: 120, height: 150, marginTop: 20, resizeMode: "contain"}}
                             source={{ uri: item.image}}
                         />
                     </SafeAreaView>
@@ -46,9 +46,22 @@ const Cart = () => {
                     </SafeAreaView>
                 </Pressable>
             ))}
-                <SafeAreaView style={{ height: 1, borderColor: "gray", borderWidth: 2}} />
+            
+                <Button
+                    title="Checkout: $255"
+                /> 
             </>
     );
                             };                            
     
-export default Cart;
+
+// const styles = Stylesheet.create({
+//     button: {
+//         alignItems: 'center', 
+//         backgroundColor: 'green', 
+//         borderRadius: '5',
+//     },
+// });
+
+
+//export default Cart;
